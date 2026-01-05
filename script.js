@@ -64,17 +64,26 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "assets/Pillole/logo.png",
             link: "project-pillole.html"
         },
+
         game3: {
             title: "FPS",
             desc: "Un gioco FPS con dinamiche di combattimento intense.",
             img: "assets/FPS/LabirintoDallAlto.png",
             link: "project-fps.html"
         },
+        
         game4: {
             title: "Escape Room",
             desc: "Trova gli indizi e supera gli enigmi per uscire dalla stanza.",
             img: "assets/EscapeRoom/FrameEscapeRoom.png",
             link: "project-escaperoom.html"
+        },
+
+        game5: {
+            title: "Sudoku",
+            desc: "Mettiti alla prova e completa l'intera griglia.",
+            img: "assets/Sudoku/ScreenSudoku.png",
+            link: "project-sudoku.html"
         }
     };
 
