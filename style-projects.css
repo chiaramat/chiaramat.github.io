@@ -70,20 +70,20 @@ ion-icon {
     text-align: center;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout adattivo */
-    gap: 40px;
-    justify-content: center;
-    margin-top: 40px;
+.projects-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px; 
+    padding: 20px; 
+    margin-top: 40px; 
 }
 
 .project-item {
     background-color: #222;
     color: #00ffea;
     font-family: 'Press Start 2P', cursive;
-    padding: 40px;
-    border: 8px solid #00ffea;
+    padding: 25px;
+    border: 6px solid #00ffea;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 8px #00ffea;
@@ -95,7 +95,7 @@ ion-icon {
 
 
 .project-item img {
-    width: 350px; /* Larghezza fissa */
+   width: 100%;
     height: 200px; /* Altezza fissa */
     object-fit: cover; /* Mantiene proporzioni senza deformare */
     border-radius: 10px;
@@ -115,17 +115,27 @@ ion-icon {
 }
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
+    margin-top: 15px;
+    padding: 12px 18px;
     background-color: #00ffea;
     color: #222;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: background 0.3s ease-in-out;
 }
 
 .btn:hover {
     background-color: #d05b65;
     box-shadow: 0 0 10px #d05b65;
+}
+
+@media (max-width: 500px) {
+    .project-item {
+        padding: 20px;
+    }
+
+    .project-item img {
+        height: 150px;
+    }
 }

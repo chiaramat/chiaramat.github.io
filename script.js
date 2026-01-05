@@ -34,8 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
     projects.forEach(project => {
         project.addEventListener("click", () => {
             const projectId = project.getAttribute("data-project");
+            const link = project.getAttribute("data-link");
+            
             if (projectId) {
                 window.location.href = `project-${projectId}.html`;
+            }
+
+            if(link) {
+                window.location.href = link;
+                return;
             }
         });
     });
@@ -86,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "project-sudoku.html"
         },
 
-        game5: {
+        game6: {
             title: "→",
             desc: "Altri progetti...",
             link: "projects.html"
