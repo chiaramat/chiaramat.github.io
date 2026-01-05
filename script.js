@@ -52,18 +52,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dati dei progetti
     const projectData = {
         game1: {
+            title: "LabTest",
+            desc: "Vesti i panni di uno scienziato ed effettua esperimenti su uno strano essere organico",
+            img: "assets/LabTest/LabTestBG.png",
+            link: "project-labtest.html"
+        },
+        
+        game2: {
             title: "Pillole di Teatro",
             desc: "Progetto VR per la visualizzazione video in 360 by Gold VR",
             img: "assets/Pillole/logo.png",
             link: "project-pillole.html"
         },
-        game2: {
+        game3: {
             title: "FPS",
             desc: "Un gioco FPS con dinamiche di combattimento intense.",
             img: "assets/FPS/LabirintoDallAlto.png",
             link: "project-fps.html"
         },
-        game3: {
+        game4: {
             title: "Escape Room",
             desc: "Trova gli indizi e supera gli enigmi per uscire dalla stanza.",
             img: "assets/EscapeRoom/FrameEscapeRoom.png",
