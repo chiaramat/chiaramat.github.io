@@ -84,6 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
             desc: "Mettiti alla prova e completa l'intera griglia.",
             img: "assets/Sudoku/ScreenSudoku.png",
             link: "project-sudoku.html"
+        },
+
+        game5: {
+            title: "→",
+            desc: "Altri progetti...",
+            link: "projects.html"
         }
     };
 
