@@ -1,45 +1,76 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Chiara Maturo - Progetti</title>
-    <link rel="icon" type="image/png" href="assets/iconaCM.png">
-    <link rel="stylesheet" href="style-singleProject.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudoku | Chiara Maturo</title>
+<meta name="description" content="Sudoku: riproduzione del classico gioco con generazione casuale delle griglie e controlli sulla partita, di Chiara Maturo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>Sudoku</h1>
-    </header>
-    
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                <li><a href="cv.html"><ion-icon name="document-text-outline"></ion-icon> CV</a></li>
-                <li><a href="projects.html"><ion-icon name="code-slash-outline"></ion-icon> Progetti</a></li>
-            </ul>
-        </nav>
-    </header>
-    <img src="assets/Sudoku/ScreenSudoku.png" alt="Sudoku">
-    <section class="projects-container">
-        <div class="project-card">
-            <p class="project-description">
-                Si tratta di una riproduzione del classico gioco del sudoku
-                <br>
-                Comprende generazioni casuali sempre diverse e coerenti.
-                <br> Sono inoltre presenti i controlli su possibili errori e completamento della partita.
-            </p>
-        </div>
-        <video controls>
-            <source src="assets/Sudoku/PlaySudoku.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
-    </section>
-    <footer>
-        <p>© 2025 Chiara - Powered by GitHub Pages</p>
-    </footer>
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
+
+  <div class="meta"><span class="badge">Personale</span><span>Gioco di logica</span></div>
+  <h1>Sudoku</h1>
+  <img class="cover natural" src="assets/Sudoku/ScreenSudoku.png" alt="Schermata del Sudoku con la griglia di gioco">
+
+  <div class="content">
+    <div>
+      <p>Riproduzione del classico gioco del Sudoku, con griglie generate proceduralmente in modo che ogni partita sia diversa.</p>
+      <p>Il sistema verifica la coerenza delle mosse in tempo reale, segnalando i conflitti su righe, colonne e quadranti.</p>
+
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Generazione procedurale delle griglie</li>
+          <li>Controllo dei possibili errori durante la partita</li>
+          <li>Controllo del completamento della partita</li>
+          <li>Interfaccia pulita e leggibile</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>Generazione procedurale</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="gallery" aria-label="Gameplay">
+    <h2>Gameplay</h2>
+    <video controls preload="metadata" playsinline>
+      <source src="assets/Sudoku/PlaySudoku.mp4" type="video/mp4">
+      Il tuo browser non supporta il video.
+    </video>
+  </section>
+
+  <a class="next" href="project-fps.html"><div><small>Prossimo progetto</small><strong>FPS</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
 </body>
 </html>

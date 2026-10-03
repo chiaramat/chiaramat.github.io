@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Chiara Maturo - Progetti</title>
-    <link rel="icon" type="image/png" href="assets/iconaCM.png">
-    <link rel="stylesheet" href="style-singleProject.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LabTest | Chiara Maturo</title>
+<meta name="description" content="LabTest: gioco narrativo horror sviluppato in Unity da Chiara Maturo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>LabTest</h1>
-    </header>
-    
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                <li><a href="cv.html"><ion-icon name="document-text-outline"></ion-icon> CV</a></li>
-                <li><a href="projects.html"><ion-icon name="code-slash-outline"></ion-icon> Progetti</a></li>
-            </ul>
-        </nav>
-    </header>
-    <img src="assets/LabTest/LabTestBG.png" alt="LabTest">
-    <section class="projects-container">
-        <div class="project-card">
-            <p class="project-description">
-                Labtest è un <strong>gioco narrativo</strong> in cui il giocatore si trova nei panni di uno scienziato che lavora in uno stabilimento.
-                <br>
-                Il protagonista deve effettuare specifici test ogni giorno su un essere organico non ben identificato, rinchiuso e immobilizzato in una capsula.
-                <br><br>
-                Nel laboratorio il giocatore trova provette, siringhe e macchinari da utilizzare durante gli esperimenti richiesti via mail da parte della Direzione.
-                <br>
-                Dato che non può lasciare la struttura, il protagonista riceverà messaggi anche dai suoi familiari nella sua camera privata. Ma ogni tanto riceverà opzioni inaspettate.
-            </p>
-        </div>
-        
-        <img src="assets/LabTest/Syringe.gif" alt="">
-        <img src="assets/LabTest/SolidPress.gif" alt="">
-        <img src="assets/LabTest/Shaker.gif" alt="">
-        <img src="assets/LabTest/ReagentMachine.gif" alt="">
-        <img src="assets/LabTest/Progression.gif" alt="">
-        <img src="assets/LabTest/MRI.gif" alt="">
-        <img src="assets/LabTest/GameLoop.gif" alt="">
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
 
-    </section>
-    <footer>
-        <p>© 2025 Chiara - Powered by GitHub Pages</p>
-    </footer>
+  <div class="meta"><span class="badge">Personale</span><span>Videogioco horror narrativo · In sviluppo</span></div>
+  <h1>LabTest</h1>
+  <img class="cover" src="assets/LabTest/LabTestBG.png" alt="Schermata di LabTest: laboratorio con la capsula che contiene l'essere organico">
+
+  <div class="content">
+    <div>
+      <p>LabTest è un gioco narrativo in cui il giocatore veste i panni di uno scienziato che lavora in uno stabilimento isolato. Ogni giorno deve effettuare test specifici su un essere organico non ben identificato, rinchiuso e immobilizzato in una capsula.</p>
+      <p>Nel laboratorio trova provette, siringhe e macchinari da usare durante gli esperimenti richiesti via mail dalla Direzione. Non potendo lasciare la struttura, riceve messaggi dai familiari nella sua camera privata. Ma ogni tanto arrivano opzioni inaspettate.</p>
+
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Progetto sviluppato da zero: programmazione, game design e narrativa</li>
+          <li>Sistema di email e messaggi che guida la storia giorno dopo giorno</li>
+          <li>Interazione fisica con oggetti di laboratorio</li>
+          <li>Scelte del giocatore che influenzano il racconto</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>Game Design</span><span>Narrativa</span><span>Horror</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="gallery" aria-label="Gameplay">
+    <h2>Gameplay</h2>
+    <div class="g">
+      <img src="assets/LabTest/GameLoop.gif" alt="Il ciclo di gioco di LabTest" loading="lazy">
+      <img src="assets/LabTest/SolidPress.gif" alt="Il macchinario che comprime i solidi in LabTest" loading="lazy">
+      <img src="assets/LabTest/ReagentMachine.gif" alt="La macchina dei reagenti in LabTest" loading="lazy">
+      <img src="assets/LabTest/MRI.gif" alt="Lo strumento MRI in LabTest" loading="lazy">
+    </div>
+  </section>
+
+  <a class="next" href="project-sudoku.html"><div><small>Prossimo progetto</small><strong>Sudoku</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
 </body>
 </html>

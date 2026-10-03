@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Chiara Maturo - Progetti</title>
-    <link rel="icon" type="image/png" href="assets/iconaCM.png">
-    <link rel="stylesheet" href="style-singleProject.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FPS | Chiara Maturo</title>
+<meta name="description" content="FPS: progetto per studiare le NavMesh e il comportamento dei nemici, sviluppato da Chiara Maturo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>FPS</h1>
-    </header>
-    
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                <li><a href="cv.html"><ion-icon name="document-text-outline"></ion-icon> CV</a></li>
-                <li><a href="projects.html"><ion-icon name="code-slash-outline"></ion-icon> Progetti</a></li>
-            </ul>
-        </nav>
-    </header>
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
 
-    <section class="projects-container">
-        <div class="project-card">
+  <div class="meta"><span class="badge">Personale</span><span>Sparatutto in prima persona</span></div>
+  <h1>FPS</h1>
+  <img class="cover natural" src="assets/FPS/LabirintoDallAlto.png" alt="Il labirinto del gioco visto dall'alto">
 
-            <p class="project-description">
-                Questo progetto mira a studiare le <strong>NavMesh</strong> e il <strong>comportamento dei nemici</strong>.
-                <br>
-                L'obiettivo del giocatore è eliminare gli NPC con le armi a sua disposizione.
-                <br><br>
-                Il giocatore e l'NPC hanno in comune una classe padre che comprende salute, arma utilizzata e proiettili rimanenti. Viene anche specificata la fazione di appartenenza per gestire l'applicazione del danno.
-                <br><br>
-                I personaggi hanno la possibilità di utilizzare 3 diverse armi: una a colpo singolo, una che crea una rosa di colpi e l'ultima che, tenendo premuto il pulsante per sparare, carica il colpo e al rilascio viene sparato.
+  <div class="content">
+    <div>
+      <p>Questo progetto mira a studiare le <strong>NavMesh</strong> e il <strong>comportamento dei nemici</strong>. L'obiettivo del giocatore è eliminare gli NPC con le armi a sua disposizione.</p>
+      <p>Il giocatore e l'NPC hanno in comune una classe padre che comprende salute, arma utilizzata e proiettili rimanenti. Viene anche specificata la fazione di appartenenza per gestire l'applicazione del danno.</p>
+      <p>I personaggi hanno la possibilità di utilizzare 3 diverse armi: una a colpo singolo, una che crea una rosa di colpi e l'ultima che, tenendo premuto il pulsante per sparare, carica il colpo e al rilascio viene sparato.</p>
 
-            </p>
-            
-        </div>
-        <video controls>
-            <source src="assets/FPS/LabirintoConTreArmi.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
-    </section>
-    <footer>
-        <p>© 2025 Chiara - Powered by GitHub Pages</p>
-    </footer>
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Studio delle NavMesh e del comportamento dei nemici</li>
+          <li>Classe padre condivisa da giocatore e NPC, con salute, arma, proiettili e fazione per gestire il danno</li>
+          <li>Tre armi diverse: a colpo singolo, a rosa di colpi e a colpo caricato</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>NavMesh</span><span>Comportamento dei nemici</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="gallery" aria-label="Gameplay">
+    <h2>Gameplay</h2>
+    <video controls preload="metadata" playsinline>
+      <source src="assets/FPS/LabirintoConTreArmi.mp4" type="video/mp4">
+      Il tuo browser non supporta il video.
+    </video>
+  </section>
+
+  <a class="next" href="project-escaperoom.html"><div><small>Prossimo progetto</small><strong>Escape Room</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
 </body>
 </html>

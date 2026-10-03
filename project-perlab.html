@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Chiara Maturo - Progetti</title>
-    <link rel="icon" type="image/png" href="assets/iconaCM.png">
-    <link rel="stylesheet" href="style-singleProject.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perlab | Chiara Maturo</title>
+<meta name="description" content="Perlab: progetto in realtà virtuale con scopo terapeutico, per Gold VR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>Perlab - Gold VR</h1>
-    </header>
-    
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                <li><a href="cv.html"><ion-icon name="document-text-outline"></ion-icon> CV</a></li>
-                <li><a href="projects.html"><ion-icon name="code-slash-outline"></ion-icon> Progetti</a></li>
-            </ul>
-        </nav>
-    </header>
-    <img src="assets/Perlab/Perlab.jpeg" alt="VR">
-    <section class="projects-container">
-        <div class="project-card">
-            <p class="project-description">
-                Progetto in realtà virtuale con scopo terapeutico.
-                <br>
-                Il progetto punta a coinvolgere il paziente in un ambiente rilassante in cui può interagire e visualizzare contenuti sulla gestione delle emozioni, o immergersi in ambienti virtuali.
-            </p>
-        </div>
-        <video controls>
-            <source src="assets/Perlab/PerlabAmbienti.mp4" type="video/mp4">
-            <source src="assets/Perlab/PerlabComandiFilm.mp4" type="video/mp4">
-            <source src="assets/Perlab/PerlabStanza.mp4" type="video/mp4">
-            <source src="assets/Perlab/RegistrazionePerlab.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
-    </section>
-    <footer>
-        <p>© 2025 Chiara - Powered by GitHub Pages</p>
-    </footer>
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
+
+  <div class="meta"><span class="badge">Gold VR</span><span>Realtà virtuale a scopo terapeutico</span></div>
+  <h1>Perlab</h1>
+  <img class="cover natural" src="assets/Perlab/Perlab.jpeg" alt="Ambientazione immersiva di Perlab">
+
+  <div class="content">
+    <div>
+      <p>Progetto in realtà virtuale con scopo terapeutico.</p>
+      <p>Il progetto punta a coinvolgere il paziente in un ambiente rilassante in cui può interagire e visualizzare contenuti sulla gestione delle emozioni, o immergersi in ambienti virtuali.</p>
+
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Ambiente rilassante in VR in cui il paziente può interagire</li>
+          <li>Contenuti sulla gestione delle emozioni</li>
+          <li>Ambienti virtuali in cui immergersi</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>VR</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="gallery" aria-label="Gameplay">
+    <h2>Video</h2>
+    <video controls preload="metadata" playsinline>
+      <source src="assets/Perlab/PerlabAmbienti.mp4" type="video/mp4">
+      Il tuo browser non supporta il video.
+    </video>
+  </section>
+
+  <a class="next" href="project-immersive.html"><div><small>Prossimo progetto</small><strong>Immersive Nurse Training</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
 </body>
 </html>

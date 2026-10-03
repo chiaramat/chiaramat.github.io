@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Chiara Maturo - Progetti</title>
-    <link rel="icon" type="image/png" href="assets/iconaCM.png">
-    <link rel="stylesheet" href="style-singleProject.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Immersive Nurse Training | Chiara Maturo</title>
+<meta name="description" content="Immersive Nurse Training: esperienza VR in Unity per la formazione degli studenti di infermieristica, per Gold VR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>Immersive Nurse Training - Gold VR</h1>
-    </header>
-    
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                <li><a href="cv.html"><ion-icon name="document-text-outline"></ion-icon> CV</a></li>
-                <li><a href="projects.html"><ion-icon name="code-slash-outline"></ion-icon> Progetti</a></li>
-            </ul>
-        </nav>
-    </header>
-    <img src="assets/Immersive/Immersive.jpeg" alt="VR">
-    <section class="projects-container">
-        <div class="project-card">
-            <p class="project-description">
-                Esperienza immersiva in realtà virtuale, progettata per la formazione di studenti della facoltà di infermieristica.
-                <br> <br>
-                Sviluppata in Unity, consente di simulare diversi casi, personalizzabili e modulari con un'interazione tra studente, paziente e ambiente.
-                <br>
-                Lo studente viene inoltre sottoposte ad un quiz relativo alla simulazione selezionata.
-        </div>
-        <video controls>
-            <source src="assets/Immersive/Medici_Intro.mp4" type="video/mp4">
-            <source src="assets/Immersive/MediciQuiz.mp4" type="video/mp4">
-            <source src="assets/Immersive/MediciInterazioni.mp4" type="video/mp4">
-            <source src="assets/Immersive/MediciNUDO.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
-    </section>
-    <footer>
-        <p>© 2025 Chiara - Powered by GitHub Pages</p>
-    </footer>
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
+
+  <div class="meta"><span class="badge">Gold VR</span><span>Formazione in VR</span></div>
+  <h1>Immersive Nurse Training</h1>
+  <img class="cover natural" src="assets/Immersive/Immersive.jpeg" alt="Sala ospedaliera virtuale di Immersive Nurse Training">
+
+  <div class="content">
+    <div>
+      <p>Esperienza immersiva in realtà virtuale, progettata per la formazione di studenti della facoltà di infermieristica.</p>
+      <p>Sviluppata in Unity, consente di simulare diversi casi, personalizzabili e modulari con un'interazione tra studente, paziente e ambiente. Lo studente viene inoltre sottoposto a un quiz relativo alla simulazione selezionata.</p>
+
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Simulazione di diversi casi, personalizzabili e modulari</li>
+          <li>Interazione tra studente, paziente e ambiente</li>
+          <li>Quiz relativo alla simulazione selezionata</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>VR</span><span>Simulazione</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="gallery" aria-label="Gameplay">
+    <h2>Video</h2>
+    <video controls preload="metadata" playsinline>
+      <source src="assets/Immersive/Medici_Intro.mp4" type="video/mp4">
+      Il tuo browser non supporta il video.
+    </video>
+  </section>
+
+  <a class="next" href="project-labtest.html"><div><small>Prossimo progetto</small><strong>LabTest</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
 </body>
 </html>

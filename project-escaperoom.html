@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Chiara Maturo - Progetti</title>
-    <link rel="icon" type="image/png" href="assets/iconaCM.png">
-    <link rel="stylesheet" href="style-singleProject.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escape Room | Chiara Maturo</title>
+<meta name="description" content="Escape Room: progetto Unity basato su Unity Event, con sperimentazione del Line Renderer, di Chiara Maturo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>Escape Room</h1>
-    </header>
-    
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                <li><a href="cv.html"><ion-icon name="document-text-outline"></ion-icon> CV</a></li>
-                <li><a href="projects.html"><ion-icon name="code-slash-outline"></ion-icon> Progetti</a></li>
-            </ul>
-        </nav>
-    </header>
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
 
-    <section class="projects-container">
-        <div class="project-card">
+  <div class="meta"><span class="badge">Personale</span><span>Gioco di esplorazione</span></div>
+  <h1>Escape Room</h1>
+  <img class="cover natural" src="assets/EscapeRoom/FrameEscapeRoom.png" alt="Schermata della stanza di Escape Room">
 
-            <p class="project-description">
-                Questo progetto mira a creare un Escape Room con l'utilizzo dei vari strumenti nascosti nella stanza, al fine di trovare la chiave per uscire.  
-                <br> <br>
-                Il progetto è stato strutturato in modo da utilizzare pochi script che sfruttano gli Unity Event.
-                <br>
-                 Questo facilita anche l'implementazione in VR.
-            </p>
-            
-        </div>
-        <video controls>
-            <source src="assets/EscapeRoom/EscapeRoom.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
-        
-        <div class="project-card">
+  <div class="content">
+    <div>
+      <p>Questo progetto mira a creare un Escape Room con l'utilizzo dei vari strumenti nascosti nella stanza, al fine di trovare la chiave per uscire.</p>
+      <p>Il progetto è stato strutturato in modo da utilizzare pochi script che sfruttano gli Unity Event. Questo facilita anche l'implementazione in VR.</p>
 
-            <p class="project-description">
-                
-                Ho inoltre sperimentato l'utilizzo del Line Renderer, andando a colorare tutta la stanza.
-                
-            </p>
-            
-        </div>
-        
-        <video controls>
-            <source src="assets/EscapeRoom/DisegnoLineRenderer.mp4" type="video/mp4">
-            Il tuo browser non supporta il video.
-        </video>
-    </section>
-    
-    <footer>
-        <p>© 2025 Chiara - Powered by GitHub Pages</p>
-    </footer>
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Escape room con strumenti nascosti nella stanza per trovare la chiave d'uscita</li>
+          <li>Struttura con pochi script che sfruttano gli Unity Event</li>
+          <li>Impostazione che facilita l'implementazione in VR</li>
+          <li>Sperimentazione del Line Renderer per colorare tutta la stanza</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>Unity Event</span><span>Line Renderer</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="gallery" aria-label="Gameplay">
+    <h2>Gameplay</h2>
+    <video controls preload="metadata" playsinline>
+      <source src="assets/EscapeRoom/EscapeRoom.mp4" type="video/mp4">
+      Il tuo browser non supporta il video.
+    </video>
+    <p class="cap">Ho inoltre sperimentato l'utilizzo del Line Renderer, andando a colorare tutta la stanza.</p>
+    <video controls preload="metadata" playsinline>
+      <source src="assets/EscapeRoom/DisegnoLineRenderer.mp4" type="video/mp4">
+      Il tuo browser non supporta il video.
+    </video>
+  </section>
+
+  <a class="next" href="project-melfi.html"><div><small>Prossimo progetto</small><strong>Audioguida Museo Pallottino, Melfi</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
 </body>
 </html>

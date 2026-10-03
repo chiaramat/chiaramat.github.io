@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Museo di Venosa | Chiara Maturo</title>
+<meta name="description" content="Software touchscreen per il Museo archeologico nazionale Mario Torelli di Venosa: modulo 3D fotogrammetrico, navigazione indoor e planimetria interattiva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
+
+  <div class="meta"><span class="badge">effenove srls</span><span>Software touchscreen museale</span></div>
+  <h1 class="long">Museo archeologico nazionale "Mario Torelli", Venosa</h1>
+  <!-- Sostituisci il blocco qui sotto con: <img class="cover" src="assets/Venosa/NOMEFILE.jpg" alt="Descrizione dell'immagine"> -->
+  <div class="cover-ph" role="img" aria-label="Immagine in arrivo"></div>
+
+  <div class="content">
+    <div>
+      <p>Software touchscreen sviluppato per il Museo Archeologico Nazionale "Mario Torelli" di Venosa, pensato per accompagnare il visitatore tra reperti e ambienti del museo.</p>
+      <p>Il cuore del progetto è un visualizzatore 3D di modelli fotogrammetrici con una manipolazione fluida e naturale, affiancato da una navigazione indoor e da una planimetria interattiva.</p>
+
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Modulo 3D fotogrammetrico: rotazione fluida (Lerp/Slerp), inerzia e vincoli della telecamera</li>
+          <li>Navigazione indoor con NavMesh, double tap e selettore dei piani</li>
+          <li>Sistema dati/UI modulare con caricamento dinamico a runtime per ID</li>
+          <li>Planimetria 2D interattiva con pan bidirezionale, zoom e reset</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>NavMesh</span><span>Touchscreen</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <a class="next" href="project-pillole.html"><div><small>Prossimo progetto</small><strong>Pillole di Teatro</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
+</body>
+</html>

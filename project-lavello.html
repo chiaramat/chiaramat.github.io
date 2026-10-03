@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Museo di Lavello | Chiara Maturo</title>
+<meta name="description" content="Software touchscreen per il Museo Multimediale Don Michele Favullo di Lavello: mappe 2D, visualizzatore 3D, gallerie fotografiche e busti animati.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="index.html#progetti">Progetti</a>
+      <a href="index.html#esperienza">Esperienza</a>
+      <a href="index.html#competenze">Competenze</a>
+      <a class="btn" href="index.html#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="index.html#progetti">← Tutti i progetti</a>
+
+  <div class="meta"><span class="badge">effenove srls</span><span>Software touchscreen museale</span></div>
+  <h1 class="long">Museo Multimediale "Don Michele Favullo", Lavello</h1>
+  <!-- Sostituisci il blocco qui sotto con: <img class="cover" src="assets/Lavello/NOMEFILE.jpg" alt="Descrizione dell'immagine"> -->
+  <div class="cover-ph" role="img" aria-label="Immagine in arrivo"></div>
+
+  <div class="content">
+    <div>
+      <p>Software touchscreen per il Museo Multimediale "Don Michele Favullo" di Lavello.</p>
+      <p>Ho implementato <strong>mappe 2D</strong> (con SpriteRenderer) dotate di pulsanti 3D e schede informative a caricamento dinamico a runtime, un <strong>visualizzatore 3D</strong> con rotazione touch vincolata e setup di illuminazione calibrato su ciascun modello, e gallerie fotografiche dinamiche.</p>
+      <p>Ho sviluppato anche il modulo <strong>"Personaggi Illustri"</strong>, con interfaccia a scorrimento con aggancio (snapping) e gestione via Animator e C# delle clip di animazione (idle ed espressività facciale) per i busti 3D, caricate a runtime.</p>
+
+      <div class="done">
+        <h2>Cosa ho realizzato</h2>
+        <ol>
+          <li>Mappe 2D con SpriteRenderer, pulsanti 3D e schede informative a caricamento dinamico</li>
+          <li>Visualizzatore 3D con rotazione touch vincolata e illuminazione calibrata su ciascun modello</li>
+          <li>Gallerie fotografiche dinamiche</li>
+          <li>Modulo "Personaggi Illustri" con scroll ad aggancio</li>
+          <li>Animazioni dei busti 3D (idle ed espressività facciale) gestite con Animator e C#, caricate a runtime</li>
+        </ol>
+      </div>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h2>Tecnologie</h2>
+        <div class="chips"><span>Unity</span><span>C#</span><span>Animator</span><span>SpriteRenderer</span><span>Touchscreen</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <a class="next" href="project-perlab.html"><div><small>Prossimo progetto</small><strong>Perlab</strong></div><span aria-hidden="true">→</span></a>
+</main>
+
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
+</body>
+</html>
