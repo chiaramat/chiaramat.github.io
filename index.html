@@ -1,107 +1,285 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chiara Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/iconaCM.png">
-    <link rel="stylesheet" href="style-home.css">
-    <script src="script.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiara Maturo | Unity developer: musei, VR e giochi</title>
+<meta name="description" content="Portfolio di Chiara Maturo, sviluppatrice Unity per patrimonio culturale, realtà virtuale e videogiochi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0D10; --surface:#11161B; --surface2:#171D23; --line:#232B33;
+  --text:#F2F1EC; --muted:#A3ADB5; --amber:#FFB04D; --teal:#19D3BE; --ink:#0A0D10;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{position:relative;isolation:isolate;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:1.0625rem}
+body::before{content:"";position:absolute;top:0;left:0;right:0;height:1100px;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:60px 60px;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,transparent 100%)}
+body::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(255,176,77,.17) 1px,transparent 1px),linear-gradient(90deg,rgba(255,176,77,.17) 1px,transparent 1px);
+  background-size:60px 60px;
+  -webkit-mask-image:radial-gradient(circle 240px at var(--mx,-999px) var(--my,-999px),#000,transparent);mask-image:radial-gradient(circle 240px at var(--mx,-999px) var(--my,-999px),#000,transparent)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:700;line-height:1.1;letter-spacing:-.02em}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+section[id]{scroll-margin-top:84px}
 
+header{position:sticky;top:0;z-index:10;background:rgba(10,13,16,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;flex-wrap:wrap}
+.logo{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:500;text-decoration:none}
+.logo span{color:var(--amber)}
+nav{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+nav a:not(.btn){text-decoration:none;color:var(--muted);font-weight:500}
+nav a:not(.btn):hover{color:var(--text)}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;text-decoration:none;background:var(--amber);color:var(--ink);border:1px solid var(--amber);transition:transform .2s,background .2s}
+.btn.ghost{background:transparent;color:var(--text);border-color:#3A444D}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost:hover{background:var(--surface2)}
+nav .btn{padding:8px 18px}
+
+.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:center;padding:96px 0 104px}
+.badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;font-size:.9rem}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(17,22,27,.7);color:var(--muted)}
+.badge.dot::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber)}
+.badge svg{width:15px;height:15px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);margin-bottom:26px}
+.hero h1 b{color:var(--amber);font-weight:700}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:36em;margin-bottom:32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.apps{font-size:1rem;color:var(--muted)}
+.apps a{color:var(--text);font-weight:500;text-decoration-color:var(--amber);text-decoration-thickness:2px;text-underline-offset:4px}
+.photo{position:relative;justify-self:center;width:min(100%,280px)}
+.photo::before,.photo::after{content:"";position:absolute;width:30px;height:30px;border:2px solid var(--amber);pointer-events:none}
+.photo::before{top:-12px;left:-12px;border-right:0;border-bottom:0}
+.photo::after{bottom:-12px;right:-12px;border-left:0;border-top:0}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;border:1px solid var(--line);background:var(--surface2)}
+
+.sec-h{margin-bottom:30px}
+.sec-h h2{font-size:2.3rem;display:flex;align-items:center;gap:14px}
+.sec-h h2::before{content:"";width:10px;height:10px;background:var(--amber);box-shadow:10px 10px 0 var(--teal);margin-right:10px;flex:none}
+.sec-h p{color:var(--muted);margin-top:8px}
+.sub{font-size:1.2rem;margin:40px 0 16px;color:var(--muted);font-family:Inter,sans-serif;font-weight:600;letter-spacing:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--amber)}
+.card.wide{grid-column:span 2}
+.thumb{aspect-ratio:16/9;background:var(--surface2);overflow:hidden}
+.card.wide .thumb{aspect-ratio:21/9}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{width:100%;height:100%;background:
+  linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/28px 28px,
+  linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/28px 28px,#13222A}
+.body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:1.3rem}
+.who{color:var(--amber);font-weight:600;font-size:.95rem}
+.card p{color:var(--muted)}
+.tags{margin-top:auto;padding-top:6px;font-size:.95rem;font-weight:500}
+.links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600}
+.links a{text-decoration-thickness:2px;text-decoration-color:var(--amber);text-underline-offset:4px}
+.stretch{text-decoration:none}
+.stretch::after{content:"";position:absolute;inset:0}
+
+.job-list{display:grid;grid-template-columns:1.5fr 1fr;gap:56px}
+.job{display:grid;grid-template-columns:150px 1fr;gap:20px;padding-bottom:28px}
+.job time{color:var(--muted);font-size:.95rem}
+.job h3{font-size:1.2rem}
+.job p{color:var(--muted);margin-top:4px}
+.edu h3{font-size:1.2rem;margin-bottom:14px}
+.edu div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+.edu strong{display:block}
+.edu span{color:var(--muted);font-size:.95rem}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 56px}
+.skills h3{font-size:1.2rem;margin-bottom:4px}
+.skills p{color:var(--muted)}
+
+.contact .box{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:48px}
+.contact h2{font-size:2.3rem;margin-bottom:12px}
+.contact p{max-width:34em;color:var(--muted);margin-bottom:26px}
+.contact .btns{margin-bottom:0}
+footer{padding:36px 0;margin-top:64px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.wrap + .wrap{margin-top:0}
+main > section.wrap:not(.hero){margin-bottom:96px}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;gap:40px;padding:48px 0 64px}
+  .photo{order:-1;width:min(60%,220px);justify-self:start}
+  .grid,.job-list,.skills{grid-template-columns:1fr}
+  .card.wide{grid-column:auto}
+  .job{grid-template-columns:1fr;gap:4px}
+  .job-list{gap:32px}
+  .contact .box{padding:32px 24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                <li><a href="cv.html"><ion-icon name="document-text-outline"></ion-icon> CV</a></li>
-                <li><a href="projects.html"><ion-icon name="code-slash-outline"></ion-icon> Progetti</a></li>
-        </nav>
-    </header>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span>&gt;</span> chiara.maturo</a>
+    <nav aria-label="Principale">
+      <a href="#progetti">Progetti</a>
+      <a href="#esperienza">Esperienza</a>
+      <a href="#competenze">Competenze</a>
+      <a class="btn" href="#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>I'm Chiara Maturo</h1>
-    </header>
-    
-    <!-- Il resto del contenuto della pagina -->
+<main>
+  <section class="wrap hero">
+    <div>
+      <div class="badges mono">
+        <span class="badge dot">Unity Developer @ effenove</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Potenza, Italia</span>
+      </div>
+      <h1>Ciao, sono Chiara. Creo esperienze interattive tra <b>giochi, VR e cultura.</b></h1>
+      <p class="lead">Sviluppo applicazioni in Unity e C# che avvicinano le persone al patrimonio culturale: kiosk museali, audioguide geolocalizzate, modelli 3D interattivi ed esperienze in realtà virtuale.</p>
+      <div class="btns">
+        <a class="btn" href="#progetti">Guarda i progetti</a>
+        <a class="btn ghost" href="assets/ChiaraMaturo_cv.pdf">Scarica il CV</a>
+      </div>
+      <p class="apps">Prova l'app del Museo di Melfi su <a href="https://play.google.com/store/apps/details?id=com.Effenove.MuseoMassimoPallottinoMelfi">Google Play</a> o <a href="https://apps.apple.com/it/app/museo-massimo-pallottino-melfi/id6791165624">App Store</a>.</p>
+    </div>
+    <div class="photo"><img src="assets/myface.jpg" alt="Ritratto di Chiara Maturo" width="280" height="350"></div>
+  </section>
 
-    <main>
-        <section class="about-container">
-            
-            <div class="about-me">
-                    <h2>🕹️ Chi sono</h2>
-                    <p>Ciao, sono <strong>Chiara</strong>, <em>Game Developer specializzata in Unity e VR!</em> 🎮✨</p>
+  <section class="wrap" id="progetti">
+    <div class="sec-h"><h2>Progetti</h2><p>Dal museo al visore VR, fino ai giochi che sviluppo per conto mio.</p></div>
 
-                    <p>Ho studiato presso <strong>ITS Prodigi a Pisa</strong>, dove mi sono formata come <em>Sviluppatore di videogiochi per Metaverso e Gaming</em>, approfondendo tecnologie all'avanguardia nel settore.</p>
+    <h3 class="sub">Lavori per musei e aziende</h3>
+    <div class="grid">
+      <article class="card wide">
+        <div class="thumb"><div class="ph" role="img" aria-label="Immagine in arrivo"></div></div>
+        <div class="body">
+          <h3>Audioguida Museo Pallottino, Melfi</h3>
+          <div class="who">effenove srls</div>
+          <p>App ufficiale del museo: percorso esterno con GPS e schede audio automatiche, modello 3D del Castello con livelli sezionabili, mappa sincronizzata con la bussola.</p>
+          <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.Effenove.MuseoMassimoPallottinoMelfi">Google Play</a>
+            <a href="https://apps.apple.com/it/app/museo-massimo-pallottino-melfi/id6791165624">App Store</a>
+          </div>
+          <div class="tags">Unity, C#, GPS</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><div class="ph" role="img" aria-label="Immagine in arrivo"></div></div>
+        <div class="body">
+          <h3>Museo di Venosa</h3>
+          <div class="who">effenove srls</div>
+          <p>Postazione touchscreen con modulo 3D fotogrammetrico, navigazione indoor e planimetria 2D interattiva.</p>
+          <div class="tags">Unity, C#, NavMesh</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><div class="ph" role="img" aria-label="Immagine in arrivo"></div></div>
+        <div class="body">
+          <h3>Museo di Lavello</h3>
+          <div class="who">effenove srls</div>
+          <p>Touchscreen con mappa interattiva, visualizzatore 3D e "Personaggi Illustri": busti animati caricati a runtime.</p>
+          <div class="tags">Unity, C#, Animator</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/Pillole/logo.png" alt="Logo di Pillole di Teatro" loading="lazy" style="object-fit:contain"></div>
+        <div class="body">
+          <h3><a class="stretch" href="project-pillole.html">Pillole di Teatro</a></h3>
+          <div class="who">Gold VR</div>
+          <p>Esperienza VR per vedere contenuti a 360° su visore.</p>
+          <div class="tags">Unity, C#, VR</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/Immersive/Immersive.jpeg" alt="Sala ospedaliera virtuale" loading="lazy"></div>
+        <div class="body">
+          <h3><a class="stretch" href="project-immersive.html">Immersive Nurse Training</a></h3>
+          <div class="who">Gold VR</div>
+          <p>Sala ospedaliera in VR dove gli studenti di infermieristica interagiscono con paziente e oggetti.</p>
+          <div class="tags">Unity, C#, VR</div>
+        </div>
+      </article>
+    </div>
 
-                    <p>Ho sviluppato <em>applicazioni in 360° per visori VR</em>, contribuendo alla creazione di mondi interattivi e coinvolgenti.</p>
+    <h3 class="sub">Progetti personali</h3>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb"><img src="assets/LabTest/LabTestBG.png" alt="Schermata di LabTest" loading="lazy"></div>
+        <div class="body">
+          <h3><a class="stretch" href="project-labtest.html">LabTest</a></h3>
+          <p>Gioco narrativo horror: sei uno scienziato che esegue esperimenti su un essere sconosciuto.</p>
+          <div class="tags">Unity, C#, Narrativa</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/Sudoku/ScreenSudoku.png" alt="Griglia del Sudoku" loading="lazy"></div>
+        <div class="body">
+          <h3><a class="stretch" href="project-sudoku.html">Sudoku</a></h3>
+          <p>Griglie generate proceduralmente, con controllo della coerenza delle mosse.</p>
+          <div class="tags">Unity, C#, Procedurale</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="body" style="justify-content:center;min-height:200px">
+          <h3>Altri progetti</h3>
+          <p>FPS, Escape Room e Perlab sono nella pagina dedicata.</p>
+          <a class="btn ghost" href="projects.html" style="align-self:flex-start;margin-top:8px">Vedi tutti</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-                    <p>Attualmente sto sviluppando il <strong>mio videogioco da zero</strong>, mettendo alla prova ogni aspetto dello sviluppo: dalla programmazione al game design, affinando le mie competenze in <strong>Unity e C#</strong> per creare un’esperienza unica e originale.</p>
-            </div>
+  <section class="wrap" id="esperienza">
+    <div class="sec-h"><h2>Esperienza e formazione</h2></div>
+    <div class="job-list">
+      <div>
+        <div class="job"><time>Da marzo 2026</time><div><h3>Unity Developer, effenove srls</h3><p>Potenza. App e postazioni interattive per il patrimonio culturale: logiche in C#, modelli 3D, UI multilingua e accessibile, test su kiosk e mobile.</p></div></div>
+        <div class="job"><time>Gen - mag 2025</time><div><h3>Unity Developer (stage), Gold Enterprise</h3><p>Firenze. Applicazioni VR a scopo terapeutico e sanitario.</p></div></div>
+        <div class="job"><time>Mag - lug 2024</time><div><h3>Unity Developer (stage), Gold Enterprise</h3><p>Firenze. Visualizzazione video a 360° in VR e server per la gestione dei visori.</p></div></div>
+      </div>
+      <div class="edu">
+        <h3>Formazione</h3>
+        <div><strong>Game Design per il territorio</strong><span>Manifatture Digitali Cinema, Prato, 2025</span></div>
+        <div><strong>Sviluppatore VR per Metaverso e Gaming</strong><span>ITS Prodigi, 2023-2025</span></div>
+        <div><strong>Diploma Liceo Linguistico</strong><span>2014-2019</span></div>
+      </div>
+    </div>
+  </section>
 
-            <div class="image-contact-container">
-                <img src="assets/myface.jpg" alt="Chiara - Game Developer" class="profile-pic">
-                <div class="cv-section">
-                    <h3>
-                        <a href="cv.html" class="cv-link">📜 Il mio CV</a>
-                        <a href="assets/ChiaraMaturo_cv.pdf" class="download-btn" download>
-                            <ion-icon name="download-outline"></ion-icon>
-                        </a>
-                    </h3>
-                </div>
-                <div class="contacts">
-                    <h3>📩 Contatti</h3>
-                    <p>Email: <a href="mailto:chiara.mat2000@gmail.com" target="_blank">chiara.mat2000@gmail.com</a></p>
-                    <p>LinkedIn: <a href="https://linkedin.com/in/chiaramaturo" target="_blank">linkedin.com/in/chiaramaturo</a></p>
-                    <p>GitHub: <a href="https://github.com/chiaramat" target="_blank">github.com/chiaramat</a></p>
-                </div>
-            </div>
+  <section class="wrap" id="competenze">
+    <div class="sec-h"><h2>Competenze</h2></div>
+    <div class="skills">
+      <div><h3>Unity e C#</h3><p>Logiche di interazione, UI, animazioni e illuminazione, per mobile, kiosk e visori.</p></div>
+      <div><h3>Realtà virtuale</h3><p>Video a 360°, esperienze per visori e gestione dei dispositivi da server.</p></div>
+      <div><h3>3D e fotogrammetria</h3><p>Modelli in Blender e visualizzatori 3D con rotazione touch per i musei.</p></div>
+      <div><h3>Web e script</h3><p>HTML, CSS e Python.</p></div>
+      <div><h3>Lingue</h3><p>Inglese B2-C1 (First Certificate), francese B1-B2, tedesco A2-B1.</p></div>
+    </div>
+  </section>
 
-        </section>
-
-        <section class="project-menu">
-            <h2>Seleziona un Progetto</h2>
-            <div class="menu-grid">
-                
-                <div class="project-card unlocked" data-project="labtest" data-image="assets/LabTest/LabTestBG.png">
-                    <div class="text-overlay">
-                        <h3>LabTest</h3>
-                        <p> Vesti i panni di uno scienziato ed effettua esperimenti su uno strano essere organico</p>
-                    </div>
-                </div>
-
-                <div class="project-card unlocked" data-project="pillole" data-image="assets/Pillole/logo.png">
-                    <div class="text-overlay">
-                        <h3>Pillole di Teatro</h3>
-                        <p> Progetto Vr per la visualizzazione video in 360 by Gold VR</p>
-                    </div>
-                </div>
-
-                <div class="project-card unlocked" data-project="sudoku" data-image="assets/Sudoku/ScreenSudoku.png">
-                    <div class="text-overlay">
-                        <h3>Sudoku</h3>
-                        <p>Mettiti alla prova e completa l'intera griglia</p>
-                    </div>
-                </div>
-
-                <div class="project-card unlocked" data-link="projects.html">
-                    <div class="text-overlay">
-                        <h9>→</h9>
-                        <p>Altri progetti</p>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-
-
-    </main>
-    <footer>
-        <p>© 2025 Chiara - Powered by GitHub Pages</p>
-    </footer>
-<script src="script.js"></script>
+  <section class="wrap contact" id="contatti">
+    <div class="box">
+      <h2>Hai un progetto interattivo in mente? Parliamone.</h2>
+      <p>Sono aperta a nuove collaborazioni su videogiochi, VR ed esperienze digitali per il patrimonio culturale, anche con realtà piccole.</p>
+      <div class="btns">
+        <a class="btn" href="mailto:chiara.mat2000@gmail.com">chiara.mat2000@gmail.com</a>
+        <a class="btn ghost" href="https://linkedin.com/in/chiaramaturo">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/chiaramat">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Chiara Maturo</div></footer>
+<script>
+if(matchMedia("(hover:hover)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  addEventListener("pointermove",function(e){document.body.style.setProperty("--mx",e.pageX+"px");document.body.style.setProperty("--my",e.pageY+"px")},{passive:true});
+}
+</script>
 </body>
 </html>
-
