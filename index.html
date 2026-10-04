@@ -77,12 +77,14 @@ nav .btn{padding:8px 18px}
 .ph{width:100%;height:100%;background:
   linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/28px 28px,
   linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/28px 28px,#13222A}
-.body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card h3{font-size:1.3rem}
+.body{position:relative;padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:1.3rem;padding-right:34px}
+.go{position:absolute;top:20px;right:22px;width:20px;height:20px;color:var(--muted);transition:transform .2s,color .2s}
+.card:hover .go,.card:focus-within .go{color:var(--amber);transform:translate(2px,-2px)}
 .who{color:var(--amber);font-weight:600;font-size:.95rem}
 .card p{color:var(--muted)}
 .tags{margin-top:auto;padding-top:6px;font-size:.95rem;font-weight:500}
-.links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600}
+.links{position:relative;z-index:1;width:fit-content;display:flex;gap:18px;flex-wrap:wrap;font-weight:600}
 .links a{text-decoration-thickness:2px;text-decoration-color:var(--amber);text-underline-offset:4px}
 .stretch{text-decoration:none}
 .stretch::after{content:"";position:absolute;inset:0}
@@ -91,15 +93,23 @@ nav .btn{padding:8px 18px}
 .job{display:grid;grid-template-columns:150px 1fr;gap:20px;padding-bottom:28px}
 .job time{color:var(--muted);font-size:.95rem}
 .job h3{font-size:1.2rem}
+.job h3 a{text-decoration-thickness:2px;text-decoration-color:var(--amber);text-underline-offset:4px}
 .job p{color:var(--muted);margin-top:4px}
 .edu h3{font-size:1.2rem;margin-bottom:14px}
 .edu div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
 .edu strong{display:block}
 .edu span{color:var(--muted);font-size:.95rem}
 
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 56px}
-.skills h3{font-size:1.2rem;margin-bottom:4px}
-.skills p{color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skills .box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.skills h3{font-family:Inter,system-ui,sans-serif;font-size:.95rem;color:var(--muted);font-weight:600;letter-spacing:0;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:4px 14px;border-radius:999px;background:rgba(255,176,77,.12);color:var(--amber);font-weight:500;font-size:.92rem}
+.chips.soft span{background:transparent;border:1px solid #3A444D;color:var(--text)}
+.langs div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.langs div:first-child{border-top:0;padding-top:0}
+.langs dt{font-weight:600}
+.langs dd{margin:0;color:var(--muted);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.88rem}
 
 .contact .box{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:48px}
 .contact h2{font-size:2.3rem;margin-bottom:12px}
@@ -147,7 +157,7 @@ main > section.wrap:not(.hero){margin-bottom:96px}
         <a class="btn" href="#progetti">Guarda i progetti</a>
         <a class="btn ghost" href="assets/ChiaraMaturo_cv.pdf">Scarica il CV</a>
       </div>
-      <!--<p class="apps">Prova l'app del Museo di Melfi su <a href="https://play.google.com/store/apps/details?id=com.Effenove.MuseoMassimoPallottinoMelfi">Google Play</a> o <a href="https://apps.apple.com/it/app/museo-massimo-pallottino-melfi/id6791165624">App Store</a>.</p>-->
+      <!-- <p class="apps">Prova l'app del Museo di Melfi su <a href="https://play.google.com/store/apps/details?id=com.Effenove.MuseoMassimoPallottinoMelfi">Google Play</a> o <a href="https://apps.apple.com/it/app/museo-massimo-pallottino-melfi/id6791165624">App Store</a>.</p> -->
     </div>
     <div class="photo"><img src="assets/myface.jpg" alt="Ritratto di Chiara Maturo" width="280" height="350"></div>
   </section>
@@ -155,51 +165,56 @@ main > section.wrap:not(.hero){margin-bottom:96px}
   <section class="wrap" id="progetti">
     <div class="sec-h"><h2>Progetti</h2><p>Dal museo al visore VR, fino ai giochi che sviluppo per conto mio.</p></div>
 
-    <h3 class="sub">Lavori per musei e aziende</h3>
+    <h3 class="sub">Progetti professionali</h3>
     <div class="grid">
       <article class="card wide">
         <div class="thumb"><div class="ph" role="img" aria-label="Immagine in arrivo"></div></div>
         <div class="body">
-          <h3><a class="stretch" href="project-melfi.html">Audioguida Museo Pallottino, Melfi</a></h3>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          <h3><a class="stretch" href="project-melfi.html">App Audioguida "Museo Massimo Pallottino"</a></h3>
           <div class="who">effenove srls</div>
-          <p>App ufficiale del museo: percorso esterno con GPS e schede audio automatiche, modello 3D del Castello con livelli sezionabili, mappa sincronizzata con la bussola.</p>
+          <p>Aggiornamento dell'app ufficiale del Museo di Melfi con percorso GPS, castello 3D sezionabile e mappa orientata con la bussola.</p>
           <div class="links">
             <a href="https://play.google.com/store/apps/details?id=com.Effenove.MuseoMassimoPallottinoMelfi">Google Play</a>
             <a href="https://apps.apple.com/it/app/museo-massimo-pallottino-melfi/id6791165624">App Store</a>
           </div>
-          <div class="tags">Unity, C#, GPS</div>
+          <div class="tags">Unity, C#, GPS, Mobile</div>
         </div>
       </article>
       <article class="card">
         <div class="thumb"><div class="ph" role="img" aria-label="Immagine in arrivo"></div></div>
         <div class="body">
-          <h3><a class="stretch" href="project-venosa.html">Museo di Venosa</a></h3>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          <h3><a class="stretch" href="project-venosa.html">Museo Archeologico Nazionale "Mario Torelli"</a></h3>
           <div class="who">effenove srls</div>
-          <p>Postazione touchscreen con modulo 3D fotogrammetrico, navigazione indoor e planimetria 2D interattiva.</p>
+          <p>Kiosk interattivo per il museo di Venosa con modelli 3D fotogrammetrici, navigazione indoor e planimetria 2D.</p>
           <div class="tags">Unity, C#, NavMesh</div>
         </div>
       </article>
       <article class="card">
         <div class="thumb"><img src="assets/Pillole/logo.png" alt="Logo di Pillole di Teatro" loading="lazy" style="object-fit:contain"></div>
         <div class="body">
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           <h3><a class="stretch" href="project-pillole.html">Pillole di Teatro</a></h3>
           <div class="who">Gold VR</div>
-          <p>Esperienza VR per vedere contenuti a 360° su visore.</p>
+          <p>Esperienza immersiva in realtà virtuale per la visualizzazione di contenuti a 360°.</p>
           <div class="tags">Unity, C#, VR</div>
         </div>
       </article>
       <article class="card wide">
         <div class="thumb"><div class="ph" role="img" aria-label="Immagine in arrivo"></div></div>
         <div class="body">
-          <h3><a class="stretch" href="project-lavello.html">Museo di Lavello</a></h3>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          <h3><a class="stretch" href="project-lavello.html">Museo Multimediale "Don Michele Favullo"</a></h3>
           <div class="who">effenove srls</div>
-          <p>Touchscreen con mappa interattiva, visualizzatore 3D e "Personaggi Illustri": busti animati caricati a runtime.</p>
-          <div class="tags">Unity, C#, Animator</div>
+          <p>Touchscreen con mappa interattiva, visualizzatore 3D e busti animati dei Personaggi Illustri.</p>
+          <div class="tags">Unity, C#, Animator, Lighting</div>
         </div>
       </article>
       <article class="card wide">
         <div class="thumb"><img src="assets/Perlab/Perlab.jpeg" alt="Ambientazione immersiva di Perlab" loading="lazy"></div>
         <div class="body">
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           <h3><a class="stretch" href="project-perlab.html">Perlab</a></h3>
           <div class="who">Gold VR</div>
           <p>Esperienza VR a scopo terapeutico per visualizzare contenuti multimediali e ambientazioni immersive.</p>
@@ -209,9 +224,10 @@ main > section.wrap:not(.hero){margin-bottom:96px}
       <article class="card">
         <div class="thumb"><img src="assets/Immersive/Immersive.jpeg" alt="Sala ospedaliera virtuale" loading="lazy"></div>
         <div class="body">
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           <h3><a class="stretch" href="project-immersive.html">Immersive Nurse Training</a></h3>
           <div class="who">Gold VR</div>
-          <p>Sala ospedaliera in VR dove gli studenti di infermieristica interagiscono con paziente e oggetti.</p>
+          <p>Sala ospedaliera in VR dove gli utenti - studenti di infermieristica - interagiscono con paziente e oggetti.</p>
           <div class="tags">Unity, C#, VR</div>
         </div>
       </article>
@@ -222,22 +238,25 @@ main > section.wrap:not(.hero){margin-bottom:96px}
       <article class="card">
         <div class="thumb"><img src="assets/LabTest/LabTestBG.png" alt="Schermata di LabTest" loading="lazy"></div>
         <div class="body">
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           <h3><a class="stretch" href="project-labtest.html">LabTest</a></h3>
-          <p>Gioco narrativo horror: sei uno scienziato che esegue esperimenti su un essere sconosciuto.</p>
-          <div class="tags">Unity, C#, Narrativa</div>
+          <p>Videogioco horror narrativo ambientato in un laboratorio dove si conducono esperimenti su uno strano essere organico.</p>
+          <div class="tags">Unity, C#, Narrativa, Game Design</div>
         </div>
       </article>
       <article class="card">
         <div class="thumb"><img src="assets/Sudoku/ScreenSudoku.png" alt="Griglia del Sudoku" loading="lazy"></div>
         <div class="body">
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           <h3><a class="stretch" href="project-sudoku.html">Sudoku</a></h3>
-          <p>Griglie generate proceduralmente, con controllo della coerenza delle mosse.</p>
+          <p>Riproduzione del Sudoku con generazione procedurale delle griglie e controlli di coerenza delle mosse.</p>
           <div class="tags">Unity, C#, Procedurale</div>
         </div>
       </article>
       <article class="card">
         <div class="thumb"><img src="assets/FPS/LabirintoDallAlto.png" alt="Labirinto visto dall'alto nel gioco FPS" loading="lazy"></div>
         <div class="body">
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           <h3><a class="stretch" href="project-fps.html">FPS</a></h3>
           <p>Spara e fai fuori i tuoi avversari con le armi a disposizione.</p>
           <div class="tags">Unity, C#, Sparatutto</div>
@@ -246,6 +265,7 @@ main > section.wrap:not(.hero){margin-bottom:96px}
       <article class="card">
         <div class="thumb"><img src="assets/EscapeRoom/FrameEscapeRoom.png" alt="Schermata di Escape Room" loading="lazy"></div>
         <div class="body">
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           <h3><a class="stretch" href="project-escaperoom.html">Escape Room</a></h3>
           <p>Esplora, sblocca gli strumenti ed esci dalla stanza.</p>
           <div class="tags">Unity, C#, Puzzle</div>
@@ -258,14 +278,15 @@ main > section.wrap:not(.hero){margin-bottom:96px}
     <div class="sec-h"><h2>Esperienza e formazione</h2></div>
     <div class="job-list">
       <div>
-        <div class="job"><time>Da marzo 2026</time><div><h3>Unity Developer, effenove srls</h3><p>Potenza. App e postazioni interattive per il patrimonio culturale: logiche in C#, modelli 3D, UI multilingua e accessibile, test su kiosk e mobile.</p></div></div>
-        <div class="job"><time>Gen - mag 2025</time><div><h3>Unity Developer (stage), Gold Enterprise</h3><p>Firenze. Applicazioni VR a scopo terapeutico e sanitario.</p></div></div>
-        <div class="job"><time>Mag - lug 2024</time><div><h3>Unity Developer (stage), Gold Enterprise</h3><p>Firenze. Visualizzazione video a 360° in VR e server per la gestione dei visori.</p></div></div>
+        <div class="job"><time>Da marzo 2026</time><div><h3>Unity Developer, <a href="https://www.effenove.it/" target="_blank" rel="noopener">effenove srls</a></h3><p>Potenza. App e postazioni interattive per il patrimonio culturale: logiche in C#, modelli 3D, UI multilingua e accessibile, test su kiosk e mobile.</p></div></div>
+        <div class="job"><time>Gen - mag 2025</time><div><h3>Unity Developer (stage), <a href="https://goldenterprise.it/" target="_blank" rel="noopener">Gold Enterprise</a></h3><p>Firenze. Applicazioni VR a scopo terapeutico e sanitario.</p></div></div>
+        <div class="job"><time>Mag - lug 2024</time><div><h3>Unity Developer (stage), <a href="https://goldenterprise.it/" target="_blank" rel="noopener">Gold Enterprise</a></h3><p>Firenze. Visualizzazione video a 360° in VR e server per la gestione dei visori.</p></div></div>
       </div>
       <div class="edu">
         <h3>Formazione</h3>
         <div><strong>Game Design per il territorio</strong><span>Manifatture Digitali Cinema, Prato, 2025</span></div>
         <div><strong>Sviluppatore VR per Metaverso e Gaming</strong><span>ITS Prodigi, 2023-2025</span></div>
+        <div><strong>Certificazione EIPASS 7 Moduli User</strong><span>DIDASKO Platform, 2021-2023</span></div>
         <div><strong>Diploma Liceo Linguistico</strong><span>2014-2019</span></div>
       </div>
     </div>
@@ -274,11 +295,23 @@ main > section.wrap:not(.hero){margin-bottom:96px}
   <section class="wrap" id="competenze">
     <div class="sec-h"><h2>Competenze</h2></div>
     <div class="skills">
-      <div><h3>Unity e C#</h3><p>Logiche di interazione, UI, animazioni e illuminazione, per mobile, kiosk e visori.</p></div>
-      <div><h3>Realtà virtuale</h3><p>Video a 360°, esperienze per visori e gestione dei dispositivi da server.</p></div>
-      <div><h3>3D e fotogrammetria</h3><p>Modelli in Blender e visualizzatori 3D con rotazione touch per i musei.</p></div>
-      <div><h3>Web e script</h3><p>HTML, CSS e Python.</p></div>
-      <div><h3>Lingue</h3><p>Inglese B2-C1 (First Certificate), francese B1-B2, tedesco A2-B1.</p></div>
+      <div class="box">
+        <h3>Tecniche</h3>
+        <div class="chips"><span>Unity</span><span>C#</span><span>VR / XR</span><span>Blender</span><span>Python</span><span>HTML &amp; CSS</span><span>UI/UX</span><span>Foto &amp; video editing</span></div>
+      </div>
+      <div class="box">
+        <h3>Soft skill</h3>
+        <div class="chips soft"><span>Problem solving</span><span>Adattabilità</span><span>Pianificazione</span><span>Aggiornamento continuo</span><span>Analisi delle informazioni</span></div>
+      </div>
+      <div class="box">
+        <h3>Lingue</h3>
+        <dl class="langs">
+          <div><dt>Italiano</dt><dd>Madrelingua</dd></div>
+          <div><dt>Inglese</dt><dd>B2 – C1</dd></div>
+          <div><dt>Francese</dt><dd>B1 – B2</dd></div>
+          <div><dt>Tedesco</dt><dd>A2 – B1</dd></div>
+        </dl>
+      </div>
     </div>
   </section>
 
