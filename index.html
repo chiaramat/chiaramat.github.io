@@ -93,7 +93,9 @@ nav .btn{padding:8px 18px}
 .job{display:grid;grid-template-columns:150px 1fr;gap:20px;padding-bottom:28px}
 .job time{color:var(--muted);font-size:.95rem}
 .job h3{font-size:1.2rem}
-.job h3 a{text-decoration-thickness:2px;text-decoration-color:var(--amber);text-underline-offset:4px}
+.org{display:flex;align-items:center;gap:6px;width:fit-content;margin-top:2px;font-size:.95rem;font-weight:600;color:var(--amber);text-decoration:none}
+.org:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.org svg{width:13px;height:13px;flex:none}
 .job p{color:var(--muted);margin-top:4px}
 .edu h3{font-size:1.2rem;margin-bottom:14px}
 .edu div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
@@ -278,9 +280,9 @@ main > section.wrap:not(.hero){margin-bottom:96px}
     <div class="sec-h"><h2>Esperienza e formazione</h2></div>
     <div class="job-list">
       <div>
-        <div class="job"><time>Da marzo 2026</time><div><h3>Unity Developer, <a href="https://www.effenove.it/" target="_blank" rel="noopener">effenove srls</a></h3><p>Potenza. App e postazioni interattive per il patrimonio culturale: logiche in C#, modelli 3D, UI multilingua e accessibile, test su kiosk e mobile.</p></div></div>
-        <div class="job"><time>Gen - mag 2025</time><div><h3>Unity Developer (stage), <a href="https://goldenterprise.it/" target="_blank" rel="noopener">Gold Enterprise</a></h3><p>Firenze. Applicazioni VR a scopo terapeutico e sanitario.</p></div></div>
-        <div class="job"><time>Mag - lug 2024</time><div><h3>Unity Developer (stage), <a href="https://goldenterprise.it/" target="_blank" rel="noopener">Gold Enterprise</a></h3><p>Firenze. Visualizzazione video a 360° in VR e server per la gestione dei visori.</p></div></div>
+        <div class="job"><time>Da marzo 2026</time><div><h3>Unity Developer</h3><a class="org" href="https://www.effenove.it/" target="_blank" rel="noopener">effenove srls · Potenza <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><p>App e postazioni interattive per il patrimonio culturale: logiche in C#, modelli 3D, UI multilingua e accessibile, test su kiosk e mobile.</p></div></div>
+        <div class="job"><time>Gen - mag 2025</time><div><h3>Unity Developer (stage)</h3><a class="org" href="https://goldenterprise.it/" target="_blank" rel="noopener">Gold Enterprise · Firenze <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><p>Applicazioni VR a scopo terapeutico e sanitario.</p></div></div>
+        <div class="job"><time>Mag - lug 2024</time><div><h3>Unity Developer (stage)</h3><a class="org" href="https://goldenterprise.it/" target="_blank" rel="noopener">Gold Enterprise · Firenze <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><p>Visualizzazione video a 360° in VR e server per la gestione dei visori.</p></div></div>
       </div>
       <div class="edu">
         <h3>Formazione</h3>
